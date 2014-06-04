@@ -1,0 +1,3 @@
+<?php 
+$this->output->set_header('Conctent-Type: application/json; charset=utf-8');
+echo "{Noticieses:",json_encode($json), "}";
