@@ -16,7 +16,7 @@ function getproductes() {
         return $query->result();
     }
     
-
+}
 
 function getconsoles() {   
 
@@ -24,24 +24,8 @@ function getconsoles() {
         $query = $this->db->get('consoles');
         return $query->result();
     }
-    
 
-function getanalisi() {   
-
-        $this->db->select('id, titol, consola, review');
-        $query = $this->db->get('analisi');
-        return $query->result();
-    }
-    
-
-function getnoticies() {   
-
-        $this->db->select('id, imatge, titul, descripcio');
-        $query = $this->db->get('noticias');
-        return $query->result();
-    }
-
-
+}
     
 }
 

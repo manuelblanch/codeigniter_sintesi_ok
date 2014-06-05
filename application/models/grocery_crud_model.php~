@@ -183,28 +183,6 @@ class grocery_CRUD_Model  extends CI_Model  {
         $query = $this->db->get('productos');
         return $query->result_array();
     }
-
-    function getconsoles() {   
-
-        $this->db->select('id, nom, marca, tipus, descripcio, imatge');
-        $query = $this->db->get('consoles');
-        return $query->result();
-    }
-    
-    function getanalisi() {   
-
-        $this->db->select('id, titol, consola, review');
-        $query = $this->db->get('analisi');
-        return $query->result();
-    }
-    
-
-	function getnoticies() {   
-
-        $this->db->select('id, imatge, titul, descripcio');
-        $query = $this->db->get('noticias');
-        return $query->result();
-    }
     
     function where($key, $value = NULL, $escape = TRUE)
     {

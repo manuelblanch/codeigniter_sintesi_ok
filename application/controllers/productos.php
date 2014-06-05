@@ -43,6 +43,32 @@ class Productos extends CI_Controller {
 		$this->load->view('productos/json_productes',$data);
 	}
 
+	public function json_consoles(){
+
+		$this->load->model('model_productes'); 
+		$data['json'] = $this->model_productes->getconsoles();
+		if (!$data['json']) show_404();
+		$this->load->view('productos/json_consoles',$data);
+	}
+
+	public function json_analisi(){
+		
+		$this->load->model('model_productes');
+		$data['json'] = $this->model_productes->getanalisi();
+		if (!$data['json']) show_404();
+		$this->load->view('productos/json_analisi',$data);
+	}
+
+	public function json_noticies(){
+		
+		$this->load->model('model_productes');
+		$data['json'] = $this->model_productes->getnoticies();
+		if (!$data['json']) show_404();
+		$this->load->view('productos/json_noticies',$data);
+	}
+
+		
+
 	/*
 	 * 
  	 **/
