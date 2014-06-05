@@ -74,7 +74,7 @@ class Noticies extends CI_Controller {
 			$output = $crud->render();
 			
 			/* La cargamos en la vista situada en 
-			/applications/views/productos/noticies.php */
+			/applications/views/productos/administracion.php */
 			$this->load->view('productos/noticies', $output);
 			
 		}catch(Exception $e){
