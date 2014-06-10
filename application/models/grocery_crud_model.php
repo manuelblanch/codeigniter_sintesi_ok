@@ -205,6 +205,14 @@ class grocery_CRUD_Model  extends CI_Model  {
         $query = $this->db->get('noticias');
         return $query->result();
     }
+
+	function getnovetats() {
+
+	$this->db->select('id, titol, consola, tipus');
+	$query = $this->db->get('novetats');
+	return $query->result();
+
+    }
     
     function where($key, $value = NULL, $escape = TRUE)
     {

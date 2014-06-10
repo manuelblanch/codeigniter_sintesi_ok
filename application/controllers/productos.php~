@@ -59,6 +59,22 @@ class Productos extends CI_Controller {
 		$this->load->view('productos/json_analisi',$data);
 	}
 
+	public function json_noticies(){
+		
+		$this->load->model('model_productes');
+		$data['json'] = $this->model_productes->getnoticies();
+		if (!$data['json']) show_404();
+		$this->load->view('productos/json_noticies',$data);
+	}
+
+	public function json_novetats(){
+
+		$this->load->model('model_productes');
+		$data['json'] = $this->model_productes->getnovetats();
+		if (!$data['json']) show_404();
+		$this->load->view('productos/json_novetats',$data);
+	}
+
 		
 
 	/*
@@ -259,6 +275,54 @@ class Productos extends CI_Controller {
 			/* La cargamos en la vista situada en 
 			/applications/views/productos/noticies.php */
 			$this->load->view('productos/consoles', $output);
+			
+		}catch(Exception $e){
+			/* Si algo sale mal cachamos el error y lo mostramos */
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+	}
+
+	function novetats(){
+		
+		try{
+			
+			/* Creem l'objecte */
+			$crud = new grocery_CRUD();
+
+			/* Seleccionem el tema */
+			$crud->set_theme('flexigrid');
+
+			/* Seleccionem el nombre de la taula de la nostra base de dades*/
+			$crud->set_table('novetats');
+
+			/* Li asignem un nom */
+			$crud->set_subject('Novetats');
+
+			/* Asignem el idioma español */
+			$crud->set_language('spanish');
+			
+			/* Aqui li diem a grocery que aquests camps son obligatoris */
+			$crud->required_fields( 
+				'id',
+				'titol', 
+				'consola',
+				'tipus_joc'
+			);
+
+			/* Aqui li indiquem quins camps mostrem */
+			$crud->columns(
+				'id',
+				'titol',
+				'consola', 
+				'tipus_joc'
+			);
+			
+			/* Generem la taula */
+			$output = $crud->render();
+			
+			/* La cargamos en la vista situada en 
+			/applications/views/productos/noticies.php */
+			$this->load->view('productos/novetats', $output);
 			
 		}catch(Exception $e){
 			/* Si algo sale mal cachamos el error y lo mostramos */

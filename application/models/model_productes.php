@@ -41,6 +41,14 @@ function getnoticies() {
         return $query->result();
     }
 
+function getnovetats() {
+
+	$this->db->select('id, titol, consola, tipus_joc');
+	$query = $this->db->get('novetats');
+	return $query->result();
+
+}
+
 
     
 }
