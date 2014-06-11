@@ -99,7 +99,7 @@ class Productos extends CI_Controller {
 			$crud->set_subject('Productos');
 
 			/* Asignem el idioma español */
-			$crud->set_language('spanish');
+			$crud->set_language('catalan');
 
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
@@ -151,21 +151,23 @@ class Productos extends CI_Controller {
 			$crud->set_subject('Noticies');
 
 			/* Asignem el idioma español */
-			$crud->set_language('spanish');
+			$crud->set_language('catalan');
 			
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'imatge', 
-				'titul',
+				'titul', 
+				'consola',
+				'joc',
 				'descripcio'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'imatge',
-				'titul', 
+				'titul',
+				'consola',
+				'joc', 
 				'descripcio'
 			);
 			
@@ -199,7 +201,7 @@ class Productos extends CI_Controller {
 			$crud->set_subject('Analisi');
 
 			/* Asignem el idioma español */
-			$crud->set_language('spanish');
+			$crud->set_language('catalan');
 			
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
@@ -247,7 +249,7 @@ class Productos extends CI_Controller {
 			$crud->set_subject('Consoles');
 
 			/* Asignem el idioma español */
-			$crud->set_language('spanish');
+			$crud->set_language('catalan');
 			
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
@@ -255,8 +257,8 @@ class Productos extends CI_Controller {
 				'nom', 
 				'marca',
 				'tipus',
-				'descripcio',
-				'imatge'
+				'descripcio'
+				
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
@@ -265,8 +267,8 @@ class Productos extends CI_Controller {
 				'nom',
 				'marca', 
 				'tipus',
-				'descripcio',
-				'imatge'
+				'descripcio'
+				
 			);
 			
 			/* Generem la taula */
@@ -299,7 +301,7 @@ class Productos extends CI_Controller {
 			$crud->set_subject('Novetats');
 
 			/* Asignem el idioma español */
-			$crud->set_language('spanish');
+			$crud->set_language('catalan');
 			
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields( 

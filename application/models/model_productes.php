@@ -20,7 +20,7 @@ function getproductes() {
 
 function getconsoles() {   
 
-        $this->db->select('id, nom, marca, tipus, descripcio, imatge');
+        $this->db->select('id, nom, marca, tipus, descripcio');
         $query = $this->db->get('consoles');
         return $query->result();
     }
@@ -36,7 +36,7 @@ function getanalisi() {
 
 function getnoticies() {   
 
-        $this->db->select('id, imatge, titul, descripcio');
+        $this->db->select('id, titul, consola, descripcio');
         $query = $this->db->get('noticias');
         return $query->result();
     }
