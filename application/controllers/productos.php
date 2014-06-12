@@ -156,19 +156,17 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'titul', 
-				'consola',
-				'joc',
-				'descripcio'
+				'titul_noticia', 
+				'consola_noticia',
+				'descripcio_noticia'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'titul',
-				'consola',
-				'joc', 
-				'descripcio'
+				'titul_noticia',
+				'consola_noticia', 
+				'descripcio_noticia'
 			);
 			
 			/* Generem la taula */
@@ -206,16 +204,16 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'titol', 
-				'consola',
+				'titol_analisi', 
+				'consola_de_analisi',
 				'review'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'titol',
-				'consola', 
+				'titol_analisi',
+				'consola_de_analisi', 
 				'review'
 			);
 			
@@ -254,20 +252,20 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'nom', 
+				'nom_consola', 
 				'marca',
-				'tipus',
-				'descripcio'
+				'tipus_consola',
+				'descripcio_consola'
 				
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'nom',
+				'nom_consola',
 				'marca', 
-				'tipus',
-				'descripcio'
+				'tipus_consola',
+				'descripcio_consola'
 				
 			);
 			
@@ -306,17 +304,17 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields( 
 				'id',
-				'titol', 
-				'consola',
-				'tipus_joc'
+				'titol_novetat', 
+				'consoles_disponibles',
+				'tipus_novetat'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'titol',
-				'consola', 
-				'tipus_joc'
+				'titol_novetat',
+				'consoles_disponibles', 
+				'tipus_novetat'
 			);
 			
 			/* Generem la taula */

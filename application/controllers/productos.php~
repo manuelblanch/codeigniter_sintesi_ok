@@ -156,17 +156,17 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'imatge', 
-				'titul',
-				'descripcio'
+				'titul_joc', 
+				'consola_joc',
+				'descripcio_noticia'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'imatge',
-				'titul', 
-				'descripcio'
+				'titul_joc',
+				'consola_joc', 
+				'descripcio_noticia'
 			);
 			
 			/* Generem la taula */
@@ -204,16 +204,16 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'titol', 
-				'consola',
+				'titol_joc', 
+				'consola_de_joc',
 				'review'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'titol',
-				'consola', 
+				'titol_joc',
+				'consola_de_joc', 
 				'review'
 			);
 			
@@ -252,21 +252,21 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields(
 				'id',
-				'nom', 
+				'nom_consola', 
 				'marca',
-				'tipus',
-				'descripcio',
-				'imatge'
+				'tipus_consola',
+				'descripcio_consola'
+				
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'nom',
+				'nom_consola',
 				'marca', 
-				'tipus',
-				'descripcio',
-				'imatge'
+				'tipus_consola',
+				'descripcio_consola'
+				
 			);
 			
 			/* Generem la taula */
@@ -304,16 +304,16 @@ class Productos extends CI_Controller {
 			/* Aqui li diem a grocery que aquests camps son obligatoris */
 			$crud->required_fields( 
 				'id',
-				'titol', 
-				'consola',
+				'titol_', 
+				'consoles_disponibles',
 				'tipus_joc'
 			);
 
 			/* Aqui li indiquem quins camps mostrem */
 			$crud->columns(
 				'id',
-				'titol',
-				'consola', 
+				'titol_',
+				'consoles_disponibles', 
 				'tipus_joc'
 			);
 			

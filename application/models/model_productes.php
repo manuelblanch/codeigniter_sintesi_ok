@@ -20,7 +20,7 @@ function getproductes() {
 
 function getconsoles() {   
 
-        $this->db->select('id, nom, marca, tipus, descripcio');
+        $this->db->select('id, nom_consola, marca, tipus_consola, descripcio_consola');
         $query = $this->db->get('consoles');
         return $query->result();
     }
@@ -28,7 +28,7 @@ function getconsoles() {
 
 function getanalisi() {   
 
-        $this->db->select('id, titol, consola, review');
+        $this->db->select('id, titol_analisi, consola_analisi, review');
         $query = $this->db->get('analisi');
         return $query->result();
     }
@@ -36,14 +36,14 @@ function getanalisi() {
 
 function getnoticies() {   
 
-        $this->db->select('id, titul, consola, descripcio');
+        $this->db->select('id, titul_noticia, consola_noticia, descripcio_noticia');
         $query = $this->db->get('noticias');
         return $query->result();
     }
 
 function getnovetats() {
 
-	$this->db->select('id, titol, consola, tipus_joc');
+	$this->db->select('id, titol_novetat, consoles_disponibles, tipus_novetat');
 	$query = $this->db->get('novetats');
 	return $query->result();
 
